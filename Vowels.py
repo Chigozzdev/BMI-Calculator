@@ -1,24 +1,16 @@
-name = str(input('Enter name: '))
+#A program to calculate the number of vowels in a word
 
-weight = int(input('Enter weight(kg): '))
+vowelCount = 0
 
-height = eval(input('Enter height(m²): '))
+vowels = ["a", "e", "i", "o", "u"]
 
-upremark = "you're underweight!"
+vowelWords = input('Enter word:')
 
-remark = "you're overweight!"
+for vowelWord in vowelWords:
 
-bmi_calc = (weight/height)
+    if(vowelWord==vowels[0] or vowelWord==vowels[1] or vowelWord==vowels[2] or vowelWord==vowels[3] or vowelWord==vowels[4]):
+        
+        vowelCount=vowelCount+1
 
-if bmi_calc < 25:
-  print('weight(kg): ' + str(weight))
-  print('height(m²): ' + str(height))
-  print('BMI: ' + str(bmi_calc))
-  print('Hey ' + name + ', '+ upremark)
-  
-if bmi_calc >= 25:
-  print('weight(kg): ' + str(weight))
-  print('height(m²): ' + str(height))
-  print('BMI: ' + str(bmi_calc)+' Kg/m²')
-  print('Hey ' + name + ', '+ remark)
-      
+
+print(vowelCount)
